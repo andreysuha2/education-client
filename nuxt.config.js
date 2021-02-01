@@ -7,7 +7,7 @@ module.exports = {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'nuxt-boilerplate',
+        title: 'Education',
         htmlAttrs: { lang: 'en' },
         meta: [
             { charset: 'utf-8' },
