@@ -73,7 +73,8 @@ module.exports = {
                 "@lib": path.resolve(__dirname, "./assets/js"),
                 "@scss": path.resolve(__dirname, "./assets/scss"),
                 "@components": path.resolve(__dirname, "./components"),
-                "@helpers": path.resolve(__dirname, "./assets/js/helpers"),
+                "@globalComponents": path.resolve(__dirname, "./components/global"),
+                "@helpers": path.resolve(__dirname, "./assets/js/helpers")
             };
 
             Object.assign(config.resolve.alias, aliases);
