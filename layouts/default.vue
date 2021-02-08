@@ -1,5 +1,6 @@
 <template>
-    <div class="app">
+    <div class="app"
+        :class="classList.app">
         <app-menu class="app--menu"/>
         <div class="app--wrapper">
             <div class="app--content">
@@ -17,12 +18,24 @@
 import AppHeader from "@globalComponents/AppHeader";
 import AppFooter from "@globalComponents/AppFooter";
 import AppMenu from "@globalComponents/AppMenu";
+import { mapState } from "vuex";
 
 export default {
     comments: {
         "app-header": AppHeader,
         "app-footer": AppFooter,
         "app-menu": AppMenu
+    },
+    computed: {
+        ...mapState("app", { theme(state) { return state.themeDark ? "dark" : "light"; } }),
+        classList() {
+            return {
+                app: {
+                    "app__light": this.theme === "light",
+                    "app__dark": this.theme === "dark"
+                }
+            };
+        }
     }
 };
 </script>
@@ -31,6 +44,7 @@ export default {
 .app {
     display: flex;
     min-height: 100%;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
 
     &--wrapper {
         display: flex;
@@ -51,20 +65,17 @@ export default {
 
 <style lang="scss">
 .app {
-    &--header, &--footer {
-        padding: 10px;
+    &__light {
+        --background-color: #{$lightBackgroundColor};
+        --text-color: #{$lightTextColor};
     }
 
-    &--header {
-        border-bottom: 1px solid #000;
+    &__dark {
+        --background-color: #{$darkBackgroundColor};
+        --text-color: #{$darkTextColor};
     }
 
-    &--footer {
-        border-top: 1px solid #000;
-    }
-
-    &--menu {
-        border-right: 1px solid #000;
-    }
+    background: var(--background-color);
+    color: var(--text-color);
 }
 </style>
