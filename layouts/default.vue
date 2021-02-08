@@ -77,21 +77,5 @@ export default {
 
     background: var(--background-color);
     color: var(--text-color);
-
-    &--header, &--footer {
-        padding: 10px;
-    }
-
-    &--header {
-        border-bottom: 1px solid var(--text-color);
-    }
-
-    &--footer {
-        border-top: 1px solid var(--text-color);
-    }
-
-    &--menu {
-        border-right: 1px solid var(--text-color);
-    }
 }
 </style>

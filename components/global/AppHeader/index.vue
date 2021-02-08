@@ -22,3 +22,11 @@ export default {
     }
 };
 </script>
+
+<style lang="scss" scoped>
+.app-header {
+    border-bottom: 1px solid var(--text-color);
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+</style>
