@@ -26,8 +26,8 @@ module.exports = {
 
     styleResources: {
         scss: [
-            'assets/scss/_variables.scss',
-            'assets/scss/_mixins.scss'
+            'assets/scss/variables.scss',
+            'assets/scss/mixins.scss'
         ]
     },
 

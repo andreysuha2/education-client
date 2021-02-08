@@ -1,0 +1,1 @@
+export default () => ({ themeDark: false });
