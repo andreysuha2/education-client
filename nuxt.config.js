@@ -72,6 +72,7 @@ module.exports = {
                 "@assets": path.resolve(__dirname, "./assets"),
                 "@lib": path.resolve(__dirname, "./assets/js"),
                 "@scss": path.resolve(__dirname, "./assets/scss"),
+                "@fonts": path.resolve(__dirname, "./assets/fonts"),
                 "@components": path.resolve(__dirname, "./components"),
                 "@globalComponents": path.resolve(__dirname, "./components/global"),
                 "@helpers": path.resolve(__dirname, "./assets/js/helpers")

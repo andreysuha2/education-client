@@ -1,5 +1,10 @@
 <template>
-    <footer class="app-footer">footer</footer>
+    <footer class="app-footer">
+        <span>footer</span>
+        <span>footer</span>
+        <span>footer</span>
+        <span>footer</span>
+    </footer>
 </template>
 
 <style lang="scss" scoped>
