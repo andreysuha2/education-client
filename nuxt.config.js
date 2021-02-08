@@ -33,6 +33,7 @@ module.exports = {
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [
+        '~/plugins/IconFont'
     ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
@@ -59,6 +60,18 @@ module.exports = {
                     exclude: /(node_modules)/
                 });
             }
+
+            config.module.rules.push({
+                test: /plugins\/IconFont\/index\.js$/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                    {
+                        loader: 'webfonts-loader',
+                        options: { publicPath: config.output.publicPath }
+                    }
+                ]
+            });
 
             config.plugins.push(
                 new webpack.DefinePlugin({ isDev }),
